@@ -21,12 +21,13 @@ module.exports = (grunt) ->
           user: 'username'
           pass: 'password'
       all:
-        objects: ['http://www.your-domain.com/*']
-      download:
-        options:
-          action: 'invalidate'
-          proxy: 'http://some-proxy.com'
-        objects: ['http://www.your-domain.com/downloads/*']
+        fileMatch:
+          dest: "http://mySite.com/"
+          pattern: "**/*"
+          options:
+            cwd: "./folder"
+            src: ["**/*.js"]
+            filter: "isFile"
 
 
   # Actually load this plugin's task(s).

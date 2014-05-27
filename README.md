@@ -87,7 +87,15 @@ grunt.initConfig({
       }
     },
     all: {
-      objects: ['http://www.your-domain.com/*']
+      fileMatch:{
+        dest: "http://widgets.outbrain.com/",
+        pattern: "**/*",
+        options: {
+          cwd: "./stage",
+          src: ["**/*.js"],
+          filter: "isFile"
+        }
+      }
     }
   },
 });
@@ -111,14 +119,15 @@ grunt.initConfig({
       }
     },
     all: {
-      objects: ['http://www.your-domain.com/*']
-    },
-    downloads: {
-      options: {
-        action: 'invalidate',
-        proxy: 'http://some-proxy.com'
-      },
-      objects: ['http://www.your-domain.com/downloads/*']
+      fileMatch:{
+        dest: "http://widgets.outbrain.com/",
+        pattern: "**/*",
+        options: {
+          cwd: "./stage",
+          src: ["**/*.js"],
+          filter: "isFile"
+        }
+      }
     }
   },
 });
