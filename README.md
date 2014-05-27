@@ -88,7 +88,7 @@ grunt.initConfig({
     },
     all: {
       fileMatch:{
-        dest: "http://widgets.outbrain.com/",
+        dest: "http://mySite.com/",
         pattern: "**/*",
         options: {
           cwd: "./stage",
@@ -120,7 +120,7 @@ grunt.initConfig({
     },
     all: {
       fileMatch:{
-        dest: "http://widgets.outbrain.com/",
+        dest: "http://mySite.com/",
         pattern: "**/*",
         options: {
           cwd: "./stage",
